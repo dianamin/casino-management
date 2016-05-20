@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F608E3411CEF785D00D7CF79 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F608E3401CEF785D00D7CF79 /* main.cpp */; };
+		F608E3491CEF7B2C00D7CF79 /* Casino.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F608E3471CEF7B2C00D7CF79 /* Casino.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		F608E33D1CEF785C00D7CF79 /* casino-management */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "casino-management"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F608E3401CEF785D00D7CF79 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F608E3471CEF7B2C00D7CF79 /* Casino.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Casino.cpp; path = include/Casino.cpp; sourceTree = "<group>"; };
+		F608E3481CEF7B2C00D7CF79 /* Casino.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Casino.h; path = include/Casino.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				F608E3401CEF785D00D7CF79 /* main.cpp */,
+				F608E3471CEF7B2C00D7CF79 /* Casino.cpp */,
+				F608E3481CEF7B2C00D7CF79 /* Casino.h */,
 			);
 			path = "casino-management";
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F608E3491CEF7B2C00D7CF79 /* Casino.cpp in Sources */,
 				F608E3411CEF785D00D7CF79 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
