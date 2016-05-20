@@ -1,10 +1,10 @@
 #include <iostream>
 
+#include "Budget.h"
 #include "Casino.h"
 
 
 using namespace std;
-
 
 Casino *Casino::s_instance = 0;
 

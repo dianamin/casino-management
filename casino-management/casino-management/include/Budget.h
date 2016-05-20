@@ -1,40 +1,37 @@
 //
-//  Casino.h
+//  Budget.h
 //  casino-management
 //
 //  Created by Diana Ghinea on 20/05/16.
 //  Copyright © 2016 Diana Ghinea. All rights reserved.
 //
 
-#ifndef Casino_h
-#define Casino_h
+#ifndef Budget_h
+#define Budget_h
 
 #include <stdio.h>
-#include "Budget.h"
 
 
-class Casino {
+class Budget {
 private:
     int value;
-    static Casino *s_instance;
+    static Budget *s_instance;
     
-    Casino(int val = 0) {
+    Budget(int val = 0) {
         value = val;
     }
     
-    
 public:
-    static Casino *instance() {
+    static Budget *instance() {
         if (!s_instance)
-            s_instance = new Casino;
+            s_instance = new Budget;
         return s_instance;
     }
     
-    void set_value(int new_value);
+    void modify_value(int val);
     int get_value() const;
 };
 
 
 
-#endif /* Casino_h */
-
+#endif /* Budget_h */
