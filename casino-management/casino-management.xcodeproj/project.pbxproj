@@ -11,6 +11,7 @@
 		F608E3491CEF7B2C00D7CF79 /* Casino.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F608E3471CEF7B2C00D7CF79 /* Casino.cpp */; };
 		F608E34C1CEF83F700D7CF79 /* Budget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F608E34A1CEF83F700D7CF79 /* Budget.cpp */; };
 		F608E34F1CEF8BA100D7CF79 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F608E34D1CEF8BA100D7CF79 /* Game.cpp */; };
+		F62308401CF07E5200233039 /* Bill.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F623083E1CF07E5200233039 /* Bill.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,10 @@
 		F608E34B1CEF83F700D7CF79 /* Budget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Budget.h; path = include/Budget.h; sourceTree = "<group>"; };
 		F608E34D1CEF8BA100D7CF79 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Game.cpp; path = include/Game.cpp; sourceTree = "<group>"; };
 		F608E34E1CEF8BA100D7CF79 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = include/Game.h; sourceTree = "<group>"; };
+		F623083E1CF07E5200233039 /* Bill.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Bill.cpp; path = include/Bill.cpp; sourceTree = "<group>"; };
+		F623083F1CF07E5200233039 /* Bill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bill.h; path = include/Bill.h; sourceTree = "<group>"; };
+		F62308411CF07EA400233039 /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; path = include; sourceTree = "<group>"; };
+		F62308431CF07F0300233039 /* Expenditure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Expenditure.h; path = include/Expenditure.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +71,17 @@
 		F608E33F1CEF785C00D7CF79 /* casino-management */ = {
 			isa = PBXGroup;
 			children = (
+				F62308411CF07EA400233039 /* include */,
 				F608E3401CEF785D00D7CF79 /* main.cpp */,
 				F608E34A1CEF83F700D7CF79 /* Budget.cpp */,
 				F608E34B1CEF83F700D7CF79 /* Budget.h */,
+				F62308431CF07F0300233039 /* Expenditure.h */,
 				F608E3471CEF7B2C00D7CF79 /* Casino.cpp */,
 				F608E3481CEF7B2C00D7CF79 /* Casino.h */,
 				F608E34D1CEF8BA100D7CF79 /* Game.cpp */,
 				F608E34E1CEF8BA100D7CF79 /* Game.h */,
+				F623083E1CF07E5200233039 /* Bill.cpp */,
+				F623083F1CF07E5200233039 /* Bill.h */,
 			);
 			path = "casino-management";
 			sourceTree = "<group>";
@@ -137,6 +146,7 @@
 				F608E3411CEF785D00D7CF79 /* main.cpp in Sources */,
 				F608E34C1CEF83F700D7CF79 /* Budget.cpp in Sources */,
 				F608E34F1CEF8BA100D7CF79 /* Game.cpp in Sources */,
+				F62308401CF07E5200233039 /* Bill.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +267,7 @@
 				F608E3461CEF785D00D7CF79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

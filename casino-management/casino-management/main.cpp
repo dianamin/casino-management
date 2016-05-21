@@ -1,5 +1,10 @@
 #include <iostream>
+#include <cstring>
+#include <algorithm>
 
+
+#include "Expenditure.h"
+#include "Bill.h"
 #include "Budget.h"
 #include "Casino.h"
 

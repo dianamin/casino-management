@@ -10,11 +10,17 @@
 #define Budget_h
 
 #include <stdio.h>
+#include <vector>
+
+#include "Bill.h"
 
 
 class Budget {
 private:
     int value;
+    
+    std :: vector <Bill> bills;
+    
     static Budget *s_instance;
     
     Budget(int val = 0) {
