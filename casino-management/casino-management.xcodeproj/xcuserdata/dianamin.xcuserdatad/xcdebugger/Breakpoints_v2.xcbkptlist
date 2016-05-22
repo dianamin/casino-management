@@ -25,14 +25,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "casino-management/include/Bill.h"
-            timestampString = "485619920.620398"
+            filePath = "casino-management/include/Bill.cpp"
+            timestampString = "485622024.118145"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "class Bill"
-            landmarkType = "3">
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "operator&lt;&lt;(std :: ostream&amp; os, const Bill&amp; bill)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -41,13 +41,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "casino-management/include/Bill.h"
-            timestampString = "485619920.620398"
+            filePath = "casino-management/include/Bill.cpp"
+            timestampString = "485622085.142617"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "get_total()"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "Bill :: add_expenditure(Expenditure expenditure)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
