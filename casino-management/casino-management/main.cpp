@@ -19,14 +19,17 @@ Budget *Budget :: s_instance = 0;
 
 int main(int argc, const char * argv[]) {
     
-    Casino :: instance()->set_value(1);
+    Casino :: instance() -> set_value(1);
    // cout << Casino :: instance() -> get_value() << '\n';
     
     Game g;
     
-    Casino :: instance()->add_client("Diana");
-    Casino :: instance()->get_client(0).play_game(g);
-        
-    std::cout << "Hello, World!\n";
+    Casino :: instance() -> add_client("Diana");
+    cout << '\n';
+    (* Casino :: instance() -> get_client(0)).play_game(g);
+    Casino :: instance() -> remove_client(0);
+    
+    Budget :: instance() -> show_history();
+    
     return 0;
 }

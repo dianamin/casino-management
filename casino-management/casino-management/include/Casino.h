@@ -44,7 +44,7 @@ public:
     int get_value() const;
     
     void add_client(std :: string name);
-    Client get_client(int id);
+    std :: vector <Client> :: iterator get_client(int id);
     void remove_client(int id);
 };
 

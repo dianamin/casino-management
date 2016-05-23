@@ -19,3 +19,14 @@ int Budget :: get_value() const {
 void Budget :: add_bill(Bill bill) {
     bills.push_back(bill);
 }
+
+void Budget :: show_history() {
+    int l = (int)bills.size();
+    
+    std :: cout << "Buget: " << value;
+    std :: cout << "\n---------------\n";
+    
+    for (int i = 0; i < l; i++) {
+        std :: cout << bills[i] << "\n---------------\n";
+    }
+}

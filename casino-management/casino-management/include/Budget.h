@@ -38,6 +38,8 @@ public:
     int get_value() const;
     
     void add_bill(Bill bill);
+    
+    void show_history();
 };
 
 
