@@ -36,6 +36,8 @@ public:
     
     void modify_value(int val);
     int get_value() const;
+    
+    void add_bill(Bill bill);
 };
 
 

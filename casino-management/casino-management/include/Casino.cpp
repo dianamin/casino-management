@@ -27,3 +27,13 @@ Client Casino :: get_client(int id) {
         if (clients[i].get_id() == id) return clients[i];
     return clients[l];
 }
+
+void Casino :: remove_client(int id) {
+    std :: vector <Client> :: iterator it;
+    for (it = clients.begin(); it != clients.end(); it++) {
+        if ((*it).get_id() != id) continue;
+        (*it).pay_bill();
+        clients.erase(it);
+        return;
+    }
+}

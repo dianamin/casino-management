@@ -16,3 +16,6 @@ int Budget :: get_value() const {
     return Budget :: value;
 }
 
+void Budget :: add_bill(Bill bill) {
+    bills.push_back(bill);
+}

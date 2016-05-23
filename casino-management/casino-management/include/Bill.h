@@ -19,6 +19,7 @@
 class Bill {
 private:
     std :: vector <Expenditure> expenditures;
+    std :: string client_name;
     
 public:
     void add_expenditure(Expenditure expenditure);
@@ -26,6 +27,10 @@ public:
     void remove_expenditure(std :: string name, int price, std :: string details);
     void remove_expenditure(Expenditure expenditure);
     int get_total() const;
+    
+    
+    void set_name(std :: string given_name);
+    std :: string get_client_name() const;
     
     
     friend std :: ostream& operator<<(std :: ostream& os, const Bill& bill);

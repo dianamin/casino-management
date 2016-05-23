@@ -13,6 +13,7 @@
 #include <sstream>
 #include <cstring>
 
+#include "Budget.h"
 #include "Bill.h"
 #include "Game.h"
 
@@ -27,6 +28,7 @@ public:
     Client(std :: string given_name) {
         id = Client :: current_client_id++;
         name = given_name;
+        bill.set_name(name);
         std :: cout << "Clientul " << name << " (" << id << ") a fost adaugat!";
     }
     
@@ -36,6 +38,8 @@ public:
     void play_game(Game g);
     
     int get_id() const;
+    
+    void pay_bill();
     
     friend std :: ostream& operator<<(std :: ostream& os, const Client& client);
 };

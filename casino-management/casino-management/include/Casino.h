@@ -45,6 +45,7 @@ public:
     
     void add_client(std :: string name);
     Client get_client(int id);
+    void remove_client(int id);
 };
 
 

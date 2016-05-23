@@ -34,6 +34,15 @@ int Bill :: get_total() const {
 }
 
 
+void Bill :: set_name(std :: string given_name) {
+    client_name = given_name;
+}
+
+std :: string Bill :: get_client_name() const {
+    return client_name;
+}
+
+
 std :: ostream& operator<<(std :: ostream& os, const Bill& bill)
 {
     os << "Bill:\n";

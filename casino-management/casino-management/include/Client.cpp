@@ -26,7 +26,11 @@ std :: string Client :: get_name() const {
 
 void Client :: play_game(Game game) {
     bill.add_expenditure(game.play());
-    std :: cout << bill << '\n';
+}
+
+void Client :: pay_bill() {
+    Budget :: instance() -> modify_value(bill.get_total());
+    Budget :: instance() -> add_bill(bill);
 }
 
 int Client :: get_id() const {

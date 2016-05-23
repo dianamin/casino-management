@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "casino-management/include/Bill.cpp"
-            timestampString = "485622024.118145"
+            timestampString = "485702116.805747"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "operator&lt;&lt;(std :: ostream&amp; os, const Bill&amp; bill)"
             landmarkType = "7">
          </BreakpointContent>
