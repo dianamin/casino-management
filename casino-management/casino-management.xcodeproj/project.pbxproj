@@ -12,6 +12,7 @@
 		F608E34C1CEF83F700D7CF79 /* Budget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F608E34A1CEF83F700D7CF79 /* Budget.cpp */; };
 		F608E34F1CEF8BA100D7CF79 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F608E34D1CEF8BA100D7CF79 /* Game.cpp */; };
 		F62308401CF07E5200233039 /* Bill.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F623083E1CF07E5200233039 /* Bill.cpp */; };
+		F6EB3DA81CF2064B00DCCDB0 /* Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6EB3DA61CF2064B00DCCDB0 /* Client.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +40,8 @@
 		F623083F1CF07E5200233039 /* Bill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bill.h; path = include/Bill.h; sourceTree = "<group>"; };
 		F62308411CF07EA400233039 /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; path = include; sourceTree = "<group>"; };
 		F62308431CF07F0300233039 /* Expenditure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Expenditure.h; path = include/Expenditure.h; sourceTree = "<group>"; };
+		F6EB3DA61CF2064B00DCCDB0 /* Client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Client.cpp; path = include/Client.cpp; sourceTree = "<group>"; };
+		F6EB3DA71CF2064B00DCCDB0 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Client.h; path = include/Client.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,8 @@
 				F62308431CF07F0300233039 /* Expenditure.h */,
 				F608E3471CEF7B2C00D7CF79 /* Casino.cpp */,
 				F608E3481CEF7B2C00D7CF79 /* Casino.h */,
+				F6EB3DA61CF2064B00DCCDB0 /* Client.cpp */,
+				F6EB3DA71CF2064B00DCCDB0 /* Client.h */,
 				F608E34D1CEF8BA100D7CF79 /* Game.cpp */,
 				F608E34E1CEF8BA100D7CF79 /* Game.h */,
 				F623083E1CF07E5200233039 /* Bill.cpp */,
@@ -144,6 +149,7 @@
 			files = (
 				F608E3491CEF7B2C00D7CF79 /* Casino.cpp in Sources */,
 				F608E3411CEF785D00D7CF79 /* main.cpp in Sources */,
+				F6EB3DA81CF2064B00DCCDB0 /* Client.cpp in Sources */,
 				F608E34C1CEF83F700D7CF79 /* Budget.cpp in Sources */,
 				F608E34F1CEF8BA100D7CF79 /* Game.cpp in Sources */,
 				F62308401CF07E5200233039 /* Bill.cpp in Sources */,

@@ -21,8 +21,8 @@ protected:
     
     
 public:
-    virtual void play() {
-        Expenditure e("Random Game", 100, "testing");
+    virtual Expenditure play() {
+        return Expenditure("Random Game", 100, "testing");
     }
 };
 

@@ -15,3 +15,15 @@ void Casino :: set_value(int new_value) {
 int Casino :: get_value() const {
     return Casino :: value;
 }
+
+
+void Casino :: add_client(std :: string name) {
+    clients.push_back(Client(name));
+}
+
+Client Casino :: get_client(int id) {
+    int l = (int)clients.size();
+    for (int i = 0; i < l; i++)
+        if (clients[i].get_id() == id) return clients[i];
+    return clients[l];
+}

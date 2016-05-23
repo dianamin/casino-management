@@ -10,18 +10,28 @@
 #define Casino_h
 
 #include <stdio.h>
+#include <vector>
+#include <sstream>
+#include <cstring>
+
 #include "Budget.h"
+#include "Bill.h"
+#include "Client.h"
 
 
 class Casino {
 private:
     int value;
+    
+    
     static Casino *s_instance;
+    std :: vector <Bill> payed_bills;
     
     Casino(int val = 0) {
         value = val;
     }
     
+    std :: vector <Client> clients;
     
 public:
     static Casino *instance() {
@@ -32,6 +42,9 @@ public:
     
     void set_value(int new_value);
     int get_value() const;
+    
+    void add_client(std :: string name);
+    Client get_client(int id);
 };
 
 
