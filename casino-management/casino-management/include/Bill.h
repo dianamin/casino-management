@@ -28,9 +28,14 @@ public:
     void remove_expenditure(Expenditure expenditure);
     int get_total() const;
     
+    std :: vector <Expenditure> get_expenditures();
+    
     
     void set_name(std :: string given_name);
     std :: string get_client_name() const;
+    
+    int games_count(std :: string game_name) const;
+    int game_wins_count(std :: string game_name) const;
     
     
     friend std :: ostream& operator<<(std :: ostream& os, const Bill& bill);

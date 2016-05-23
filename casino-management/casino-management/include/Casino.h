@@ -50,6 +50,8 @@ public:
 
     
     void show_clients();
+    
+    double get_winning_rate(std :: string game_name) const;
 };
 
 

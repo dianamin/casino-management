@@ -30,3 +30,27 @@ void Budget :: show_history() {
         std :: cout << bills[i] << "\n---------------\n";
     }
 }
+
+int Budget :: games_count(std :: string game_name) const{
+    int count = 0;
+    
+    std :: vector <Bill> :: const_iterator it;
+    
+    for (it = bills.begin(); it != bills.end(); it++) {
+        count += (*it).games_count(game_name);
+    }
+    
+    return count;
+}
+
+int Budget :: game_wins_count(std :: string game_name) const{
+    int count = 0;
+    
+    std :: vector <Bill> :: const_iterator it;
+    
+    for (it = bills.begin(); it != bills.end(); it++) {
+        count += (*it).game_wins_count(game_name);
+    }
+    
+    return count;
+}

@@ -53,3 +53,11 @@ void Casino :: show_clients() {
         std :: cout << (*it) << '\n';
     }
 }
+
+
+double Casino :: get_winning_rate(std :: string game_name) const{
+    int games_count = Budget :: instance() -> games_count(game_name);
+    int game_wins_count = Budget :: instance() -> game_wins_count(game_name);
+    
+    return 1.0 * game_wins_count / games_count;
+}

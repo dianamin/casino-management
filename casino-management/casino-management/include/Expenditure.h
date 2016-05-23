@@ -33,7 +33,6 @@ public:
         os << "Detalii: " << expenditure.details;
         return os;
     }
-
 };
 
 

@@ -56,3 +56,29 @@ std :: ostream& operator<<(std :: ostream& os, const Bill& bill)
     
     return os;
 }
+
+std :: vector <Expenditure> Bill :: get_expenditures() {
+    return expenditures;
+}
+
+int Bill :: games_count(std :: string game_name) const {
+    std :: vector <Expenditure> :: const_iterator it;
+    int count = 0;
+    
+    for (it = expenditures.begin(); it != expenditures.end(); it++) {
+        if ((*it).name == game_name) count++;
+    }
+    
+    return count;
+}
+
+int Bill :: game_wins_count(std :: string game_name) const {
+    std :: vector <Expenditure> :: const_iterator it;
+    int count = 0;
+    
+    for (it = expenditures.begin(); it != expenditures.end(); it++) {
+        if ((*it).name == game_name) count += ((*it).price < 0);
+    }
+    
+    return count;
+}

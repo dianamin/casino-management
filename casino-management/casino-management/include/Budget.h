@@ -40,6 +40,9 @@ public:
     void add_bill(Bill bill);
     
     void show_history();
+    
+    int games_count(std :: string game_name) const;
+    int game_wins_count(std :: string game_name) const;
 };
 
 
