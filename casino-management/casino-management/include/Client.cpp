@@ -30,7 +30,8 @@ void Client :: play_game(Game game) {
 
 void Client :: pay_bill() {
     Budget :: instance() -> modify_value(bill.get_total());
-    Budget :: instance() -> add_bill(bill);}
+    Budget :: instance() -> add_bill(bill);
+}
 
 int Client :: get_id() const {
     return id;

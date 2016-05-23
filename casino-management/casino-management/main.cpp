@@ -27,7 +27,12 @@ int main(int argc, const char * argv[]) {
     Casino :: instance() -> add_client("Diana");
     cout << '\n';
     (* Casino :: instance() -> get_client(0)).play_game(g);
+    (* Casino :: instance() -> get_client(0)).play_game(g);
+    (* Casino :: instance() -> get_client(0)).play_game(g);
     Casino :: instance() -> remove_client(0);
+    
+    
+    Casino :: instance() -> show_clients();
     
     Budget :: instance() -> show_history();
     

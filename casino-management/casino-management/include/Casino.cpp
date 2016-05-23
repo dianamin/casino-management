@@ -41,3 +41,11 @@ void Casino :: remove_client(int id) {
         return;
     }
 }
+
+void Casino :: show_clients() {
+    std :: vector <Client> :: iterator it;
+    
+    for (it = clients.begin(); it != clients.end(); it++) {
+        std :: cout << (*it) << '\n';
+    }
+}

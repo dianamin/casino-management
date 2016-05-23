@@ -46,6 +46,8 @@ public:
     void add_client(std :: string name);
     std :: vector <Client> :: iterator get_client(int id);
     void remove_client(int id);
+    
+    void show_clients();
 };
 
 
