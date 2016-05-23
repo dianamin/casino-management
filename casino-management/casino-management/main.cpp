@@ -29,10 +29,13 @@ int main(int argc, const char * argv[]) {
     (* Casino :: instance() -> get_client(0)).play_game(g);
     (* Casino :: instance() -> get_client(0)).play_game(g);
     (* Casino :: instance() -> get_client(0)).play_game(g);
+    
+    (* Casino :: instance() -> get_client(0)).get_drink("Apa");
+
+    
+    
     Casino :: instance() -> remove_client(0);
     
-    
-    Casino :: instance() -> show_clients();
     
     Budget :: instance() -> show_history();
     

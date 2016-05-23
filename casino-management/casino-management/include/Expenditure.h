@@ -21,7 +21,7 @@ public:
     int id;
     std :: string details;
     
-    Expenditure(std :: string given_name, int given_price, std :: string given_details) {
+    Expenditure(std :: string given_name, int given_price, std :: string given_details = "") {
         name = given_name;
         price = given_price;
         details = given_details;

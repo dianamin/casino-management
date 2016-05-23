@@ -42,6 +42,7 @@
 		F62308431CF07F0300233039 /* Expenditure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Expenditure.h; path = include/Expenditure.h; sourceTree = "<group>"; };
 		F6EB3DA61CF2064B00DCCDB0 /* Client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Client.cpp; path = include/Client.cpp; sourceTree = "<group>"; };
 		F6EB3DA71CF2064B00DCCDB0 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Client.h; path = include/Client.h; sourceTree = "<group>"; };
+		F6ECE7AF1CF379DB008603D6 /* Drinks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Drinks.h; path = include/Drinks.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +88,7 @@
 				F608E34E1CEF8BA100D7CF79 /* Game.h */,
 				F623083E1CF07E5200233039 /* Bill.cpp */,
 				F623083F1CF07E5200233039 /* Bill.h */,
+				F6ECE7AF1CF379DB008603D6 /* Drinks.h */,
 			);
 			path = "casino-management";
 			sourceTree = "<group>";

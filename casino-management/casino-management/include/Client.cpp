@@ -36,3 +36,8 @@ void Client :: pay_bill() {
 int Client :: get_id() const {
     return id;
 }
+
+void Client :: get_drink(std :: string drink) {
+    int price = 30;
+    bill.add_expenditure(Expenditure(drink, price));
+}

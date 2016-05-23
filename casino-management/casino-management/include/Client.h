@@ -40,6 +40,7 @@ public:
     int get_id() const;
     
     void pay_bill();
+    void get_drink(std :: string drink);
     
     friend std :: ostream& operator<<(std :: ostream& os, const Client& client);
 };

@@ -42,6 +42,10 @@ void Casino :: remove_client(int id) {
     }
 }
 
+void Casino :: remove_client(std :: vector <Client> :: iterator it) {
+    clients.erase(it);
+}
+
 void Casino :: show_clients() {
     std :: vector <Client> :: iterator it;
     
