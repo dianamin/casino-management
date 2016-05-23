@@ -61,3 +61,8 @@ double Casino :: get_winning_rate(std :: string game_name) const{
     
     return 1.0 * game_wins_count / games_count;
 }
+
+
+double Casino :: get_losing_rate(std :: string game_name) const{
+    return 1.0 - get_winning_rate(game_name);
+}
