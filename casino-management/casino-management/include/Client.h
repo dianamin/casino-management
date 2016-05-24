@@ -24,6 +24,7 @@ private:
     std :: string name;
 
     Bill bill;
+    
 public:
     Client(std :: string given_name) {
         id = Client :: current_client_id++;

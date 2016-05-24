@@ -33,6 +33,10 @@ private:
     
     std :: vector <Client> clients;
     
+    Casino(const Casino &);
+    void operator = (Casino const &);
+    
+    
 public:
     static Casino *instance() {
         if (!s_instance)

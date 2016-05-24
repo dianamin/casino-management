@@ -27,6 +27,10 @@ private:
         value = val;
     }
     
+    
+    Budget(const Budget &);
+    void operator = (Budget const &);
+    
 public:
     static Budget *instance() {
         if (!s_instance)
