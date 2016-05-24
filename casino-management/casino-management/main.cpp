@@ -22,6 +22,7 @@ int main(int argc, const char * argv[]) {
    // cout << Casino :: instance() -> get_value() << '\n';
 
     Game *g = new blackjack;
+    
 
     Casino :: instance() -> add_client("Diana");
     Casino :: instance() -> add_client("Elf");

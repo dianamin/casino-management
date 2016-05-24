@@ -31,18 +31,17 @@ void Client :: play_game(Game *game) {
 }
 
 void Client :: play_game(std :: string game_name) {
-    //Game *game = new Game();
+    Game *game;
     
+    if (game_name == "ruleta") game = new ruleta;
+    if (game_name == "pacanea") game = new pacanea;
+    else if (game_name == "blackjack") game = new blackjack;
+    else {
+        std :: cout << "\n Jocul " << game_name << "nu exista!\n\n";
+        return;
+    }
     
-    if (game_name == "ruleta") {
-        
-    }
-    else if (game_name == "pacanea") {
-        
-    }
-    else if (game_name == "blackjack") {
-        
-    }
+    play_game(game);
 }
 
 void Client :: pay_bill() {

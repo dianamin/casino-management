@@ -19,7 +19,8 @@ public:
         return Expenditure("Random Game", 100, "testing");
     }
     
-    virtual void newBet(int b) = 0;
+    virtual void newBet(int b) {
+    }
 };
 
 
