@@ -36,7 +36,8 @@ private:
         commands["adauga client <name>"] = "Adauga clientul cu numele <name>\nExemplu: adauga client Boss";
         commands["adauga produs <type> <brand> <price> <quantity>"] = "Adauga produsul de tipul <type> de la firma <brand> ce poate fi cumparat cu pretul <price> lei la cantitatea <quantity>\nExemplu: adauga produs suc nestea 10 0.5L";
         commands["sterge client <id>"] = "Sterge clientul cu numele <client>\nExemplu: sterge client 0";
-        commands["cauta <name>"] = "Cauta id-ul clientului cu numele <client>\nExemplu: cauta Boss";
+        commands["cauta client <name>"] = "Cauta id-ul clientului cu numele <client>\nExemplu: cauta Boss";
+        commands["cauta produs <id>"] = "Verifica daca exista produsul cu id-ul <id>\nExemplu: cauta 0";
         commands["client  <id> joaca <game_name>"] = "Clientul cu id-ul <id> va juca <game_name>\nJocuri disponibile: ruleta, blackjack, pacanea\nExemplu: client 0 joaca ruleta";
         commands["lista clienti"] = "Afiseaza lista clientilor\nPentru a vedea id-ul fiecarui client";
         commands["client <id> nota"] = "Afiseaza nota de plata a clientului cu id-ul <id>\nExemplu: client 0 nota";
@@ -66,7 +67,11 @@ private:
     }
     
     void search_product(int id) {
-        //Drinks_Manager :: instance() -> do_polimorfism(Drinks_Manager :: instance() -> get_product(id));
+        if (Drinks_Manager :: instance() -> valid_id(id) == false) {
+            std :: cout << "Nu exista produse cu id-ul " << id << "!\n";
+            return;
+        }
+        cout << "Exista produsul cu id-ul " << id << "\n";
     }
     
     void show_help() {
@@ -83,7 +88,7 @@ private:
         std :: this_thread::sleep_for(std::chrono::milliseconds(1000));
         std :: cout << "Comanda nu exista!!!\n";
     }
-
+    
     
     void show_stats(std :: string game_name) {
         std :: cout << "Probabilitatea de castig: " <<  std :: fixed << std :: setprecision(2) << Casino :: instance() -> get_winning_rate(game_name)<< "\n";
@@ -190,9 +195,22 @@ public:
         }
         
         if (c == "cauta") {
-            std :: string name;
-            std :: cin >> name;
-            search_client(name);
+            std :: string a;
+            std :: cin >> a;
+            if (a == "client") {
+                std :: string name;
+                std :: cin >> name;
+                search_client(name);
+                return;
+            }
+            if (a == "produs") {
+                int id;
+                std :: cin >> id;
+                search_product(id);
+                return;
+            }
+            
+            error();
             return;
         }
         
@@ -208,7 +226,7 @@ public:
     void show_home() {
         std :: cout << home_menu;
     }
-
+    
 };
 
 #endif /* Menu_hpp */
