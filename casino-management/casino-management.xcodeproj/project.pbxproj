@@ -12,6 +12,7 @@
 		F608E34C1CEF83F700D7CF79 /* Budget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F608E34A1CEF83F700D7CF79 /* Budget.cpp */; };
 		F608E34F1CEF8BA100D7CF79 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F608E34D1CEF8BA100D7CF79 /* Game.cpp */; };
 		F62308401CF07E5200233039 /* Bill.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F623083E1CF07E5200233039 /* Bill.cpp */; };
+		F6BC67C01CF488820092858B /* Time.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6BC67BE1CF488820092858B /* Time.cpp */; };
 		F6EB3DA81CF2064B00DCCDB0 /* Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6EB3DA61CF2064B00DCCDB0 /* Client.cpp */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,8 @@
 		F623083F1CF07E5200233039 /* Bill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bill.h; path = include/Bill.h; sourceTree = "<group>"; };
 		F62308411CF07EA400233039 /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; path = include; sourceTree = "<group>"; };
 		F62308431CF07F0300233039 /* Expenditure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Expenditure.h; path = include/Expenditure.h; sourceTree = "<group>"; };
+		F6BC67BE1CF488820092858B /* Time.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Time.cpp; path = include/Time.cpp; sourceTree = "<group>"; };
+		F6BC67BF1CF488820092858B /* Time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Time.h; path = include/Time.h; sourceTree = "<group>"; };
 		F6EB3DA61CF2064B00DCCDB0 /* Client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Client.cpp; path = include/Client.cpp; sourceTree = "<group>"; };
 		F6EB3DA71CF2064B00DCCDB0 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Client.h; path = include/Client.h; sourceTree = "<group>"; };
 		F6ECE7AF1CF379DB008603D6 /* Drinks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Drinks.h; path = include/Drinks.h; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 				F623083E1CF07E5200233039 /* Bill.cpp */,
 				F623083F1CF07E5200233039 /* Bill.h */,
 				F6ECE7AF1CF379DB008603D6 /* Drinks.h */,
+				F6BC67BE1CF488820092858B /* Time.cpp */,
+				F6BC67BF1CF488820092858B /* Time.h */,
 			);
 			path = "casino-management";
 			sourceTree = "<group>";
@@ -154,6 +159,7 @@
 				F6EB3DA81CF2064B00DCCDB0 /* Client.cpp in Sources */,
 				F608E34C1CEF83F700D7CF79 /* Budget.cpp in Sources */,
 				F608E34F1CEF8BA100D7CF79 /* Game.cpp in Sources */,
+				F6BC67C01CF488820092858B /* Time.cpp in Sources */,
 				F62308401CF07E5200233039 /* Bill.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
