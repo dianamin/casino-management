@@ -75,7 +75,6 @@ private:
     vector <Drink_Type> types;
     vector <Brand_Name> brands;
     vector <Drink_Product> products;
-    Drink_Type *pointers[50000];
     int cntType, cntBrand, cntProduct;
     int kMaximumProducts;
     vector <int> G[50000];
