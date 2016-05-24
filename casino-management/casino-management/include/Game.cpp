@@ -30,7 +30,7 @@ Expenditure blackjack::play(int nr) {
             break;
     }
 
-    return Expenditure("BlackJack", nr - sum, "666");
+    return Expenditure("BlackJack", sum-nr, "666");
 }
 
 int blackjack::getCard() {
@@ -117,7 +117,7 @@ Expenditure pacanea::play(int nr) {
             break;
     }
 
-    return Expenditure("Pacanea", nr - sum, "777");
+    return Expenditure("Pacanea", sum-nr, "777");
 }
 
 void pacanea::newBet(int b) {
