@@ -85,35 +85,16 @@ private:
         cntBrand = 1 + kMaximumProducts;
         cntProduct = 1 + 2 * kMaximumProducts;
     }
-    int getId(Drink_Type foo, bool &fount) {
+    template <class T>
+    int getId(T foo, vector <T> &vect, bool &fount) {
         fount = 0;
-        for (int i = 0; i < types.size(); ++i)
-            if (types[i] == foo) {
+        for (int i = 0; i < vect.size(); ++i)
+            if (vect[i] == foo) {
                 fount = 1;
                 return i;
             }
-        types.push_back(foo);
-        return types.size() - 1;
-    }
-    int getId(Brand_Name foo, bool &fount) {
-        fount = 0;
-        for (int i = 0; i < brands.size(); ++i)
-            if (brands[i] == foo) {
-                fount = 1;
-                return i;
-            }
-        brands.push_back(foo);
-        return brands.size() - 1;
-    }
-    int getId(Drink_Product foo, bool &fount) {
-        fount = 0;
-        for (int i = 0; i < products.size(); ++i)
-            if (products[i] == foo) {
-                fount = 1;
-                return i;
-            }
-        products.push_back(foo);
-        return products.size() - 1;
+        vect.push_back(foo);
+        return vect.size() - 1;
     }
     void add_product_private(string _type, string _brand_name, int _price, string _quantity) {
         Drink_Type m_type(_type);
@@ -122,9 +103,9 @@ private:
         bool fount_type;
         bool fount_brand;
         bool fount_product;
-        int id_type = getId(m_type, fount_type);
-        int id_brand = getId(m_brand, fount_brand);
-        int id_product = getId(m_product, fount_product);
+        int id_type = getId(m_type, types, fount_type);
+        int id_brand = getId(m_brand, brands, fount_brand);
+        int id_product = getId(m_product, products, fount_product);
         if (fount_type == 0) {
             G[0].push_back(id_type + cntType);
         }
