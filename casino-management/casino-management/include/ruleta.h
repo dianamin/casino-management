@@ -17,23 +17,39 @@
 #include <iostream>
 #include <thread>
 #include <mutex>
+#include "Game.h"
+#include "Expenditure.h"
+#include <vector>
 
-class ruleta {
+class ruleta :public Game {
 public:
 
 	ruleta();
-	int get_random();
-	void ruleta_start();
-	void ruleta_stop();
 	virtual ~ruleta();
 	void running_function();
-	bool get_is_closed();
-	void set_is_closed(bool val);
+
+	virtual Expenditure play()
+	{
+		if (last_results.empty()==true) std::this_thread::sleep_for(std::chrono::milliseconds(1300));
+
+
+          std::string won_or_not=(last_results.back()>0?"won":"lost");
+          return Expenditure("ruleta",last_results.back(),won_or_not);
+	}
+
 private:
+
 	bool is_closed=true;
 	std::mutex my_mutex;
 	std::thread* my_thread;
+	std::vector<int> last_results;
+	void ruleta_start();
+	void ruleta_stop();
+	int get_random();
+	bool get_is_closed();
+	void set_is_closed(bool val);
 };
 
 #endif /* RULETA_H_ */
+
 

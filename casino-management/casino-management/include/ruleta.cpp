@@ -11,6 +11,7 @@
 
 ruleta:: ruleta() {
 	  srand(time(0));
+	  this->ruleta_start();
 }
 
 int ruleta::get_random()
@@ -36,7 +37,7 @@ bool ruleta:: get_is_closed()
 {
 	bool value;
 
-        my_mutex.lock();
+     my_mutex.lock();
 	      value=is_closed;
 	my_mutex.unlock();
 
@@ -47,7 +48,7 @@ void ruleta::set_is_closed(bool val)
 {
 	my_mutex.lock();
         	is_closed=val;
-        my_mutex.unlock();
+    my_mutex.unlock();
 }
 
 void ruleta::ruleta_start()
@@ -90,17 +91,21 @@ void ruleta::running_function()
 		
 	while (true)
 	{
-	    std::this_thread::sleep_for(std::chrono::milliseconds(1000)); 
+	        std::this_thread::sleep_for(std::chrono::milliseconds(1000));
             if (get_is_closed()==true)          
-	    {
-	     	 std::cout<<"Roulette has closed !!!"<<std::endl;
-          	 return;
+	        {
+	     	    std::cout<<"Roulette has closed !!!"<<std::endl;
+          	    //std::cout<<"YES"<<'\n';
+	     	    return;
              }
              else
              {
-            	  std::cout<<get_random()<<std::endl;
+            	  int value=get_random();
+            	  last_results.push_back(value);
+            	  std::cout<<value<<std::endl;
              }
 	}
 }
+
 
 
