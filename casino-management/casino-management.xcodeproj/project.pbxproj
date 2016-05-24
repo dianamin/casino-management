@@ -14,6 +14,7 @@
 		F62308401CF07E5200233039 /* Bill.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F623083E1CF07E5200233039 /* Bill.cpp */; };
 		F69456DA1CF4CBD9008707E7 /* ruleta.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F69456D91CF4CBD9008707E7 /* ruleta.cpp */; settings = {COMPILER_FLAGS = "-pthread"; }; };
 		F69456DD1CF4E335008707E7 /* Menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F69456DB1CF4E335008707E7 /* Menu.cpp */; };
+		F69456E61CF50B73008707E7 /* Drinks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F69456E41CF50B73008707E7 /* Drinks.cpp */; };
 		F6BC67C01CF488820092858B /* Time.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6BC67BE1CF488820092858B /* Time.cpp */; };
 		F6EB3DA81CF2064B00DCCDB0 /* Client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6EB3DA61CF2064B00DCCDB0 /* Client.cpp */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,8 @@
 		F69456D91CF4CBD9008707E7 /* ruleta.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ruleta.cpp; path = "casino-management/include/ruleta.cpp"; sourceTree = "<group>"; };
 		F69456DB1CF4E335008707E7 /* Menu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Menu.cpp; path = include/Menu.cpp; sourceTree = "<group>"; };
 		F69456DC1CF4E335008707E7 /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Menu.h; path = include/Menu.h; sourceTree = "<group>"; };
+		F69456E41CF50B73008707E7 /* Drinks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Drinks.cpp; path = include/Drinks.cpp; sourceTree = "<group>"; };
+		F69456E51CF50B73008707E7 /* Drinks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Drinks.h; path = include/Drinks.h; sourceTree = "<group>"; };
 		F6BC67BE1CF488820092858B /* Time.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Time.cpp; path = include/Time.cpp; sourceTree = "<group>"; };
 		F6BC67BF1CF488820092858B /* Time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Time.h; path = include/Time.h; sourceTree = "<group>"; };
 		F6EB3DA61CF2064B00DCCDB0 /* Client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Client.cpp; path = include/Client.cpp; sourceTree = "<group>"; };
@@ -100,6 +103,8 @@
 				F623083F1CF07E5200233039 /* Bill.h */,
 				F6BC67BE1CF488820092858B /* Time.cpp */,
 				F6BC67BF1CF488820092858B /* Time.h */,
+				F69456E41CF50B73008707E7 /* Drinks.cpp */,
+				F69456E51CF50B73008707E7 /* Drinks.h */,
 			);
 			path = "casino-management";
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 				F69456DA1CF4CBD9008707E7 /* ruleta.cpp in Sources */,
 				F608E3491CEF7B2C00D7CF79 /* Casino.cpp in Sources */,
 				F608E3411CEF785D00D7CF79 /* main.cpp in Sources */,
+				F69456E61CF50B73008707E7 /* Drinks.cpp in Sources */,
 				F6EB3DA81CF2064B00DCCDB0 /* Client.cpp in Sources */,
 				F608E34C1CEF83F700D7CF79 /* Budget.cpp in Sources */,
 				F608E34F1CEF8BA100D7CF79 /* Game.cpp in Sources */,
