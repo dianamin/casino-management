@@ -1,10 +1,3 @@
-//
-//  Game.h
-//  casino-management
-//
-//  Created by Diana Ghinea on 20/05/16.
-//  Copyright © 2016 Diana Ghinea. All rights reserved.
-//
 
 #ifndef Game_h
 #define Game_h
@@ -18,12 +11,40 @@
 
 class Game {
 protected:
-    
-    
+    int sum;
+
 public:
+
     virtual Expenditure play() {
         return Expenditure("Random Game", 100, "testing");
     }
+
+    virtual void newBet(int b) = 0;
 };
+
+
+class blackjack: public Game {
+protected:
+    int sum;
+
+public:
+    Expenditure play(int nr);
+    //    return Expenditure("Random Game", 100, "testing");
+
+    void newBet(int b);
+
+    int getCard();
+};
+
+class pacanea: public Game {
+protected:
+    int sum;
+
+public:
+    Expenditure play(int nr);
+     //   return Expenditure("Random Game", 100, "testing");
+    void newBet(int b);
+};
+
 
 #endif /* Game_h */
