@@ -34,9 +34,12 @@ void Client :: play_game(std :: string game_name) {
     Game *game;
     
     if (game_name == "ruleta") game = new ruleta;
-    if (game_name == "pacanea") game = new pacanea;
+    else if (game_name == "pacanea") game = new pacanea;
     else if (game_name == "blackjack") game = new blackjack;
-    else return;
+    else {
+        std :: cout << "Jocul " << game_name << " nu exista!!!\n";
+        return;
+    }
     
     play_game(game);
 }
