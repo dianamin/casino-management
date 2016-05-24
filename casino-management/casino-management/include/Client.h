@@ -47,6 +47,8 @@ public:
 
     void pay_bill();
     void get_drink(std :: string drink);
+    
+    Bill get_bill() const;
 
     friend std :: ostream& operator<<(std :: ostream& os, const Client& client);
 };

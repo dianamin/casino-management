@@ -36,10 +36,7 @@ void Client :: play_game(std :: string game_name) {
     if (game_name == "ruleta") game = new ruleta;
     if (game_name == "pacanea") game = new pacanea;
     else if (game_name == "blackjack") game = new blackjack;
-    else {
-        std :: cout << "\n Jocul " << game_name << "nu exista!\n\n";
-        return;
-    }
+    else return;
     
     play_game(game);
 }
@@ -57,4 +54,8 @@ int Client :: get_id() const {
 void Client :: get_drink(std :: string drink) {
     int price = 30;
     bill.add_expenditure(Expenditure(drink, price));
+}
+
+Bill Client :: get_bill() const {
+    return bill;
 }
