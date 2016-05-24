@@ -33,7 +33,7 @@ public:
 
 	 }
 
-	virtual Expenditure play()
+	virtual Expenditure play(int nr)
 	{
 		if (last_results.empty()==true) std::this_thread::sleep_for(std::chrono::milliseconds(1300));
 
