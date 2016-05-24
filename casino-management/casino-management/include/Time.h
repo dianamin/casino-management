@@ -2,8 +2,8 @@
 //  Time.hpp
 //  casino-management
 //
-//  Created by Diana Ghinea on 24/05/16.
-//  Copyright © 2016 Diana Ghinea. All rights reserved.
+//  Created by Florin Chirica on 24/05/16.
+//  Copyright © 2016 Florin Chirica. All rights reserved.
 //
 
 #ifndef Time_h

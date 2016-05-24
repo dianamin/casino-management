@@ -49,9 +49,12 @@ void Casino :: remove_client(std :: vector <Client> :: iterator it) {
 void Casino :: show_clients() {
     std :: vector <Client> :: iterator it;
     
+    std :: cout << "\nClienti:\n";
+    
     for (it = clients.begin(); it != clients.end(); it++) {
         std :: cout << (*it) << '\n';
     }
+    std :: cout << '\n';
 }
 
 

@@ -31,7 +31,9 @@ public:
         id = Client :: current_client_id++;
         name = given_name;
         bill.set_name(name);
+        std :: cout << '\n';
         std :: cout << "Clientul " << name << " (" << id << ") a fost adaugat!";
+        std :: cout << '\n';
     }
 
     std :: string get_name() const;

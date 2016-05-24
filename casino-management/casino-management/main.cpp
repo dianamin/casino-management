@@ -24,6 +24,11 @@ int main(int argc, const char * argv[]) {
     Game *g = new blackjack;
 
     Casino :: instance() -> add_client("Diana");
+    Casino :: instance() -> add_client("Elf");
+    
+    Casino :: instance() -> show_clients();
+    
+    
     cout << '\n';
     (* Casino :: instance() -> get_client(0)).play_game(g);
     (* Casino :: instance() -> get_client(0)).play_game(g);
