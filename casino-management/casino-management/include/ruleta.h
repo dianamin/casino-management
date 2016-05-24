@@ -28,6 +28,11 @@ public:
 	virtual ~ruleta();
 	void running_function();
 
+	 virtual void newBet(int b)
+	 {
+
+	 }
+
 	virtual Expenditure play()
 	{
 		if (last_results.empty()==true) std::this_thread::sleep_for(std::chrono::milliseconds(1300));

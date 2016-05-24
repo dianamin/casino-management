@@ -102,7 +102,7 @@ void ruleta::running_function()
              {
             	  int value=get_random();
             	  last_results.push_back(value);
-            	  std::cout<<value<<std::endl;
+            	  //std::cout<<value<<std::endl;
              }
 	}
 }
