@@ -58,9 +58,12 @@ std :: ostream& operator<<(std :: ostream& os, const Bill& bill)
         os << "#" << (i + 1) << " " << bill.expenditures[i] << '\n';
     }
     
+    os << "--\nTOTAL: " << bill.get_total() << '\n';
+    
     if (bill.end_time.length()) {
         os << "Achitata la: " << bill.end_time << "\n";
     }
+    
     
     os << "\n\n";
     

@@ -47,6 +47,8 @@ public:
     void set_value(int new_value);
     int get_value() const;
     
+    bool find_client(int id) const;
+    std :: vector <int> get_id(std :: string name) const;
     void add_client(std :: string name);
     std :: vector <Client> :: iterator get_client(int id);
     void remove_client(int id);
