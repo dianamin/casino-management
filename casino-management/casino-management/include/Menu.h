@@ -16,6 +16,7 @@
 #include <iomanip>
 
 #include "Casino.h"
+#include "Drinks.h"
 
 class Menu {
 private:
@@ -33,6 +34,7 @@ private:
     
     void init() {
         commands["adauga client <name>"] = "Adauga clientul cu numele <name>\nExemplu: adauga client Boss";
+        commands["adauga produs <type> <brand> <price> <quantity>"] = "Adauga produsul de tipul <type> de la firma <brand> ce poate fi cumparat cu pretul <price> lei la cantitatea <quantity>\nExemplu: adauga produs suc nestea 10 0.5L";
         commands["sterge client <id>"] = "Sterge clientul cu numele <client>\nExemplu: sterge client 0";
         commands["cauta <name>"] = "Cauta id-ul clientului cu numele <client>\nExemplu: cauta Boss";
         commands["client  <id> joaca <game_name>"] = "Clientul cu id-ul <id> va juca <game_name>\nJocuri disponibile: ruleta, blackjack, pacanea\nExemplu: client 0 joaca ruleta";
@@ -40,6 +42,7 @@ private:
         commands["client <id> nota"] = "Afiseaza nota de plata a clientului cu id-ul <id>\nExemplu: client 0 nota";
         commands["istoric"] = "Afiseaza notele de plata deja achitate";
         commands["statistici <game_name>"] = "Afiseaza statisticile pentru jocul <gamen_name>\nExemplu: statistici ruleta";
+        commands["meniu"] = "Afiseaza produsele";
     }
     
     Menu() {
@@ -60,6 +63,10 @@ private:
         std :: vector <int> :: iterator it;
         for (it = ids.begin(); it != ids.end(); it++) std :: cout << *it << ' ';
         std :: cout << '\n';
+    }
+    
+    void search_product(int id) {
+        //Drinks_Manager :: instance() -> do_polimorfism(Drinks_Manager :: instance() -> get_product(id));
     }
     
     void show_help() {
@@ -96,10 +103,24 @@ public:
         
         
         if (c == "adauga") {
-            std :: string a, name;
+            std :: string a;
             std :: cin >> a;
-            std :: cin >> name;
-            Casino :: instance() -> add_client(name);
+            if (a == "client") {
+                std :: string name;
+                std :: cin >> name;
+                Casino :: instance() -> add_client(name);
+                return;
+            }
+            if (a == "produs") {
+                std :: string type, quantity, brand;
+                int price;
+                std :: cin  >> type >> brand >> price >> quantity;
+                
+                Drinks_Manager :: instance() -> add_product(type, brand, price, quantity);
+                return;
+            }
+            
+            error();
             return;
         }
         if (c == "sterge") {
@@ -172,6 +193,11 @@ public:
             std :: string name;
             std :: cin >> name;
             search_client(name);
+            return;
+        }
+        
+        if (c == "meniu") {
+            Drinks_Manager :: instance() -> show_menu();
             return;
         }
         

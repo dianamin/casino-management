@@ -10,6 +10,7 @@
 #include "Game.h"
 #include "Time.h"
 #include "Menu.h"
+#include "Drinks.h"
 
 using namespace std;
 
@@ -20,7 +21,7 @@ Time *Time :: s_instance = NULL;
 
 
 Menu *Menu :: s_instance = NULL;
-
+Drinks_Manager *Drinks_Manager :: s_instance = NULL;
 
 int main(int argc, const char * argv[]) {
     
@@ -30,28 +31,5 @@ int main(int argc, const char * argv[]) {
         Menu :: instance() -> get_command();
     }
     
-    
-    Casino :: instance() -> set_value(1);
-   // cout << Casino :: instance() -> get_value() << '\n';
-
-    Game *g = new ruleta;
-    
-
-    Casino :: instance() -> add_client("Diana");
-    Casino :: instance() -> add_client("Elf");
-    
-    Casino :: instance() -> show_clients();
-    
-    
-    cout << '\n';
-    (* Casino :: instance() -> get_client(0)).play_game(g);
-
-
-
-    Casino :: instance() -> remove_client(0);
-
-
-    Budget :: instance() -> show_history();
-
     return 0;
 }

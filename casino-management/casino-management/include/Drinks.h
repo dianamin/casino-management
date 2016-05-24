@@ -9,7 +9,8 @@
 #ifndef Drinks_h
 #define Drinks_h
 
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -169,7 +170,6 @@ public:
     }
 };
 
-Drinks_Manager *Drinks_Manager :: s_instance = NULL;
 
 
 
