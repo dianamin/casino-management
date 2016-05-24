@@ -15,11 +15,15 @@
 #include <cstring>
 
 #include "Expenditure.h"
+#include "Time.h"
 
 class Bill {
 private:
     std :: vector <Expenditure> expenditures;
     std :: string client_name;
+    
+    std :: string start_time;
+    std :: string end_time;
     
 public:
     void add_expenditure(Expenditure expenditure);
@@ -37,9 +41,15 @@ public:
     int games_count(std :: string game_name) const;
     int game_wins_count(std :: string game_name) const;
     
+    void quit_bill();
+    
     
     friend std :: ostream& operator<<(std :: ostream& os, const Bill& bill);
 
+    Bill() {
+        start_time = Time :: instance() -> get_time();
+        end_time = "";
+    }
 };
 
 

@@ -71,7 +71,6 @@ public:
     }
 };
 
-Time *Time :: s_instance = NULL;
 
 
 #endif /* Time_hpp */

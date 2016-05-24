@@ -42,14 +42,24 @@ std :: string Bill :: get_client_name() const {
     return client_name;
 }
 
+void Bill :: quit_bill() {
+    end_time = Time :: instance()->get_time();
+}
 
 std :: ostream& operator<<(std :: ostream& os, const Bill& bill)
 {
-    os << "Bill:\n";
+    os << "Nota:\n";
+    
+    os << "\n" << bill.start_time << " \n";
+    
     int expenditures_count = (int)bill.expenditures.size();
     
     for (int i = 0; i < expenditures_count; i++) {
         os << "#" << (i + 1) << " " << bill.expenditures[i] << '\n';
+    }
+    
+    if (bill.end_time.length()) {
+        os << "Achitata la: " << bill.end_time << "\n";
     }
     
     os << "\n\n";

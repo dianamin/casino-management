@@ -13,6 +13,7 @@
 #include <sstream>
 #include <cstring>
 #include <algorithm>
+#include "Time.h"
 
 class Expenditure {
 public:
@@ -20,17 +21,21 @@ public:
     int price;
     int id;
     std :: string details;
+    std :: string time;
     
     Expenditure(std :: string given_name, int given_price, std :: string given_details = "") {
         name = given_name;
         price = given_price;
         details = given_details;
+        time = Time :: instance() -> get_time();
     }
     
     friend std :: ostream& operator<<(std :: ostream& os, const Expenditure& expenditure)
     {
         os << expenditure.name << ' ' << expenditure.price << " lei\n";
-        os << "Detalii: " << expenditure.details;
+        os << "Detalii: " << expenditure.details << '\n';
+        os << expenditure.time << '\n';
+        os << "--\n";
         return os;
     }
 };

@@ -46,6 +46,7 @@ void Client :: play_game(std :: string game_name) {
 
 void Client :: pay_bill() {
     Budget :: instance() -> modify_value(bill.get_total());
+    bill.quit_bill();
     Budget :: instance() -> add_bill(bill);
 }
 
