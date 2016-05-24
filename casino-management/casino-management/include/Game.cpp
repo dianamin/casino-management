@@ -11,7 +11,7 @@ Expenditure blackjack::play(int nr) {
     srand((int)time(0));
 
     while(1) {
-        cout << string( 100, '\n' );
+        cout << string( 5, '\n' );
         cout << "Budget: " << sum << "\n1 x - Bet x , 2 - Exit : ";
         int a, b;
         cin >> a;
@@ -49,6 +49,7 @@ void blackjack::newBet(int b) {
     int dl = getCard();
 
     cout << "Dealer : " << dl << "\n";
+
     while(1) {
         cout << "You : " << su << "  (1 - hit, 2 - stand)\n";
 
@@ -56,6 +57,7 @@ void blackjack::newBet(int b) {
             cout << "Blackjack! won : " << 3 * b / 2 + b << "\n";
 
             sum += 3 * b / 2 + b;
+            return;
         }
 
         int a;
@@ -65,6 +67,7 @@ void blackjack::newBet(int b) {
             su += getCard();
             if(su > 21) {
                 cout << su << " You lost.";
+                return;
             }
         }
         else {
@@ -75,6 +78,7 @@ void blackjack::newBet(int b) {
             if(su == dl) {
                 cout << "Draw.";
                 sum += b;
+                return;
             }
 
             if(dl > 21 || dl < su) {
@@ -82,6 +86,7 @@ void blackjack::newBet(int b) {
                 cout << "win : " << 2 * b << "\n";
 
                 sum += 2 * b;
+                return;
             }
         }
     }
