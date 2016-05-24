@@ -148,6 +148,11 @@ public:
     void show_menu() {
         dfs(0);
     }
+    bool valid_id(int id) {
+        if (id < 0)
+            return 0;
+        return id >= products.size() ? 0 : 1;
+    }
 };
 
 Drinks_Manager *Drinks_Manager :: s_instance = NULL;
