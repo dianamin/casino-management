@@ -22,7 +22,7 @@ private:
     static int current_client_id;
     int id;
     std :: string name;
-    
+
     Bill bill;
 public:
     Client(std :: string given_name) {
@@ -31,17 +31,17 @@ public:
         bill.set_name(name);
         std :: cout << "Clientul " << name << " (" << id << ") a fost adaugat!";
     }
-    
+
     std :: string get_name() const;
     void set_name(std :: string given_name);
-    
-    void play_game(Game g);
-    
+
+    void play_game(Game *g);
+
     int get_id() const;
-    
+
     void pay_bill();
     void get_drink(std :: string drink);
-    
+
     friend std :: ostream& operator<<(std :: ostream& os, const Client& client);
 };
 

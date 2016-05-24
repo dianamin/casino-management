@@ -12,7 +12,7 @@
 std :: ostream& operator<<(std :: ostream& os, const Client& client)
 {
     os << client.id << " " << client.name;
-    
+
     return os;
 }
 
@@ -24,8 +24,8 @@ std :: string Client :: get_name() const {
     return name;
 }
 
-void Client :: play_game(Game game) {
-    bill.add_expenditure(game.play());
+void Client :: play_game(Game *game) {
+    bill.add_expenditure(game->play());
 }
 
 void Client :: pay_bill() {
