@@ -8,7 +8,7 @@ using namespace std;
 Expenditure blackjack::play(int nr) {
     sum = nr;
 
-    srand(time(0));
+    srand((int)time(0));
 
     while(1) {
         cout << string( 100, '\n' );
@@ -90,7 +90,7 @@ void blackjack::newBet(int b) {
 Expenditure pacanea::play(int nr) {
     sum = nr;
 
-    srand(time(0));
+    srand((int)time(0));
 
     while(1) {
         cout << string( 100, '\n' );

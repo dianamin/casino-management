@@ -25,7 +25,24 @@ std :: string Client :: get_name() const {
 }
 
 void Client :: play_game(Game *game) {
-    bill.add_expenditure(game->play());
+    int nr;
+    std :: cin >> nr;
+    bill.add_expenditure(game->play(nr));
+}
+
+void Client :: play_game(std :: string game_name) {
+    //Game *game = new Game();
+    
+    
+    if (game_name == "ruleta") {
+        
+    }
+    else if (game_name == "pacanea") {
+        
+    }
+    else if (game_name == "blackjack") {
+        
+    }
 }
 
 void Client :: pay_bill() {

@@ -16,6 +16,7 @@
 #include "Budget.h"
 #include "Bill.h"
 #include "Game.h"
+#include "ruleta.h"
 
 class Client {
 private:
@@ -37,6 +38,8 @@ public:
     void set_name(std :: string given_name);
 
     void play_game(Game *g);
+    void play_game(std :: string game_name);
+
 
     int get_id() const;
 

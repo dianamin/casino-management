@@ -12,13 +12,13 @@
 class Game {
 protected:
     int sum;
-
+    
 public:
-
-    virtual Expenditure play() {
+    
+    virtual Expenditure play(int nr) {
         return Expenditure("Random Game", 100, "testing");
     }
-
+    
     virtual void newBet(int b) = 0;
 };
 
@@ -26,23 +26,23 @@ public:
 class blackjack: public Game {
 protected:
     int sum;
-
+    
 public:
     Expenditure play(int nr);
     //    return Expenditure("Random Game", 100, "testing");
-
+    
     void newBet(int b);
-
+    
     int getCard();
 };
 
 class pacanea: public Game {
 protected:
     int sum;
-
+    
 public:
     Expenditure play(int nr);
-     //   return Expenditure("Random Game", 100, "testing");
+    //   return Expenditure("Random Game", 100, "testing");
     void newBet(int b);
 };
 

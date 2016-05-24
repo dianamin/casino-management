@@ -21,8 +21,8 @@ private:
     Time() {
     }
 
-    string to_string(int x) {
-        string s;
+    std :: string to_string(int x) {
+        std :: string s;
         int foo = 0;
         do {
             ++foo;
@@ -38,8 +38,8 @@ private:
     int hour, minute, second;
     int day, month, year;
 
-    string get_month(int month) {
-        const string romanian_months[] = {"mare b0$$", "Ianuarie", "Februarie", "Martie", "Aprilie", "Mai", "Iunie", "Iulie", "August", "Septembrie", "Octombrie", "Noiembrie", "Decembrie"};
+    std :: string get_month(int month) {
+        const std :: string romanian_months[] = {"mare b0$$", "Ianuarie", "Februarie", "Martie", "Aprilie", "Mai", "Iunie", "Iulie", "August", "Septembrie", "Octombrie", "Noiembrie", "Decembrie"};
         return romanian_months[month];
     }
 
@@ -63,9 +63,9 @@ public:
             s_instance = new Time;
         return s_instance;
     }
-    string get_time() {
+    std ::string get_time() {
         set_variables();
-        string res;
+        std :: string res;
         res = to_string(day) + "/" + get_month(month) + "/" + to_string(year) + " " + to_string(hour) + ":" + to_string(minute) + ":" + to_string(second);
         return res;
     }
