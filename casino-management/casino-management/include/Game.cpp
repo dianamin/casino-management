@@ -130,7 +130,7 @@ void pacanea::newBet(int b) {
     sum -= b;
 
     for(i = 0; i < 5; ++i) {
-        x[i] = rand() % 8 + 1;
+        x[i] = rand() % 5 + 3;
 
         cout << x[i] << " ";
     }
@@ -147,6 +147,8 @@ void pacanea::newBet(int b) {
                 win *= 3;
 
         }
+
+        win *= 3;
 
         cout << "\n Win : " << win << "\n";
 
