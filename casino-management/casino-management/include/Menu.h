@@ -36,7 +36,7 @@ private:
         commands["adauga client <name>"] = "Adauga clientul cu numele <name>\nExemplu: adauga client Boss";
         commands["adauga produs <type> <brand> <price> <quantity>"] = "Adauga produsul de tipul <type> de la firma <brand> ce poate fi cumparat cu pretul <price> lei la cantitatea <quantity>\nExemplu: adauga produs suc nestea 10 0.5L";
         commands["sterge client <id>"] = "Sterge clientul cu numele <client>\nExemplu: sterge client 0";
-        commands["cauta client <name>"] = "Cauta id-ul clientului cu numele <client>\nExemplu: cauta Boss";
+        commands["cauta client <name>"] = "Cauta id-ul clientului cu numele <client>\nExemplu: cauta client Boss";
         commands["cauta produs <id>"] = "Verifica daca exista produsul cu id-ul <id>\nExemplu: cauta 0";
         commands["client  <id> joaca <game_name>"] = "Clientul cu id-ul <id> va juca <game_name>\nJocuri disponibile: ruleta, blackjack, pacanea\nExemplu: client 0 joaca ruleta";
         commands["lista clienti"] = "Afiseaza lista clientilor\nPentru a vedea id-ul fiecarui client";
@@ -44,6 +44,8 @@ private:
         commands["istoric"] = "Afiseaza notele de plata deja achitate";
         commands["statistici <game_name>"] = "Afiseaza statisticile pentru jocul <gamen_name>\nExemplu: statistici ruleta";
         commands["meniu"] = "Afiseaza produsele";
+        commands["client <id> consuma <drink>"] = "Adauga la nota de plata a clientului cu id-ul <id> bautura <drink>";
+        commands["client <id> consum"] = "Afiseaza consumul clientului cu id-ul <id>";
     }
     
     Menu() {
@@ -72,6 +74,14 @@ private:
             return;
         }
         cout << "Exista produsul cu id-ul " << id << "\n";
+    }
+    
+    void show_drinks(std :: vector <Drink_Product> drinks) {
+        std :: vector <Drink_Product> :: iterator it;
+        for (it = drinks.begin(); it != drinks.end(); it++) {
+            std :: cout << (*it).get_name() << ' ';
+        }
+        std :: cout << "\n";
     }
     
     void show_help() {
@@ -151,7 +161,7 @@ public:
                 }
                 
                 if (Casino :: instance() -> find_client(id) == false) {
-                    std :: cout << "Clientul nu exista!/n";
+                    std :: cout << "Clientul nu exista!\n";
                     return;
                 }
                 (* Casino :: instance() -> get_client(id)).play_game(game_name);
@@ -159,6 +169,40 @@ public:
             }
             else if (a == "nota") {
                 std :: cout << (* Casino :: instance() -> get_client(id)).get_bill() << '\n';
+                return;
+            }
+            else if (a == "consuma") {
+                int drink;
+                std :: cin >> drink;
+                
+                if (Casino :: instance() -> find_client(id) == false) {
+                    std :: cout << "Clientul nu exista!/n";
+                    return;
+                }
+                
+                if (Drinks_Manager :: instance() -> valid_id(drink) == false) {
+                    std :: cout << "Nu exista produse cu id-ul " << drink << "!\n";
+                    return;
+                }
+                
+                Drink_Product drink_object = Drinks_Manager :: instance() -> get_product(drink);
+                
+                std :: cout << "Exista produsul cu id-ul " << id << "\n";
+                
+                if (Casino :: instance() -> find_client(id) == false) {
+                    std :: cout << "Clientul nu exista!/n";
+                    return;
+                }
+                (* Casino :: instance() -> get_client(id)).get_drink(drink_object);
+                std :: cout << "Bautura a fost adaugata!\n";
+                return;
+            }
+            else if (a == "consum") {
+                if (Casino :: instance() -> find_client(id) == false) {
+                    std :: cout << "Clientul nu exista!/n";
+                    return;
+                }
+                show_drinks((* Casino :: instance() -> get_client(id)).get_drinks());
                 return;
             }
             error();

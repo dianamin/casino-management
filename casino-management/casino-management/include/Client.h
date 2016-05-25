@@ -15,6 +15,7 @@
 
 #include "Budget.h"
 #include "Bill.h"
+#include "Drinks.h"
 #include "Game.h"
 #include "ruleta.h"
 
@@ -25,6 +26,8 @@ private:
     std :: string name;
 
     Bill bill;
+    
+    vector <Drink_Product> drinks;
     
 public:
     Client(std :: string given_name) {
@@ -46,7 +49,8 @@ public:
     int get_id() const;
 
     void pay_bill();
-    void get_drink(std :: string drink);
+    void get_drink(Drink_Product drink);
+    vector <Drink_Product> get_drinks() const;
     
     Bill get_bill() const;
 

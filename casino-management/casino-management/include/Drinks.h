@@ -62,6 +62,15 @@ class Drink_Product : public Brand_Name {
             this->price = _price;
             this->quantity = _quantity;
         }
+    
+    string get_name() const{
+        return type + " " + brand_name + " " + quantity;
+    }
+    
+    int get_price() const {
+        return price;
+    }
+    
     inline bool operator == (const Drink_Product &other) {
         return this->type == other.type && this->brand_name == other.brand_name && this->price == other.price && this->quantity == other.quantity;
     }

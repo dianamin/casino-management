@@ -25,8 +25,7 @@ bool Casino :: find_client(int id) const{
     std :: vector <Client> :: const_iterator it;
     
     for (it = clients.begin(); it != clients.end(); it++) {
-        if ((*it).get_id() != id) continue;
-        return true;
+        if ((*it).get_id() == id) return true;
     }
     return false;
 }

@@ -54,9 +54,13 @@ int Client :: get_id() const {
     return id;
 }
 
-void Client :: get_drink(std :: string drink) {
-    int price = 30;
-    bill.add_expenditure(Expenditure(drink, price));
+void Client :: get_drink(Drink_Product drink) {
+    bill.add_expenditure(Expenditure(drink.get_name(), drink.get_price()));
+    drinks.push_back(drink);
+}
+
+vector <Drink_Product> Client :: get_drinks() const {
+    return drinks;
 }
 
 Bill Client :: get_bill() const {
