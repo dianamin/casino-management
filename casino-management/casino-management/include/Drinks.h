@@ -15,8 +15,6 @@
 
 using namespace std;
 
-/* apa, sucuri, berika, vodka, stroh etc. */
-
 class Drink_Type {
     protected:
         string type;
@@ -33,8 +31,6 @@ class Drink_Type {
     }
 };
 
-/* Coca-Cola, Stalinskaya, Noroc etc. */
-
 class Brand_Name : public Drink_Type {
     protected:
         string brand_name;
@@ -50,8 +46,6 @@ class Brand_Name : public Drink_Type {
         cout << "   Bauturi ale brandului " << this->brand_name << "\n";
     }
 };
-
-/* Coca-Cola 330 ml, Noroc 3L, Stalinskaya 0.7L */
 
 class Drink_Product : public Brand_Name {
     protected:
